@@ -1,0 +1,8 @@
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\obj\Debug\SFM_Easy.csprojResolveAssemblyReference.cache
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\bin\Debug\SFM_Easy.exe.config
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\bin\Debug\SFM_Easy.exe
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\bin\Debug\SFM_Easy.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\bin\Debug\SFM.dll
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\bin\Debug\SFM.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\obj\Debug\SFM_Easy.exe
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFM_Easy\obj\Debug\SFM_Easy.pdb

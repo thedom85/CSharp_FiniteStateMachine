@@ -1,0 +1,8 @@
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\bin\Debug\SFMMonitorApp.exe.config
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\obj\Debug\SFMMonitorApp.csprojResolveAssemblyReference.cache
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\bin\Debug\SFMMonitorApp.exe
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\bin\Debug\SFMMonitorApp.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\bin\Debug\SFM.dll
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\bin\Debug\SFM.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\obj\Debug\SFMMonitorApp.exe
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMMonitorApp\obj\Debug\SFMMonitorApp.pdb

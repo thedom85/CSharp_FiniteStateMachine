@@ -1,0 +1,7 @@
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\bin\Debug\SFMCSVRead.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\bin\Debug\SFM.dll
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\bin\Debug\SFM.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\obj\Debug\SFMCSVRead.csprojResolveAssemblyReference.cache
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\obj\Debug\SFMCSVRead.pdb
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\bin\Debug\SFMCSVRead.exe
+C:\D\Progetti\CSharp_StatiFiniti_Monitor\SFMMonitorApp\SFMCSVRead\SFMCSVRead\obj\Debug\SFMCSVRead.exe
