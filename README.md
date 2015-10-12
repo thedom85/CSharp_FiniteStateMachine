@@ -38,7 +38,7 @@ namespace SFM_Easy.States
 ```
 
 
-### Create State StatePaused
+### Create State Paused
 ```C#
 using System;
 using System.Collections.Generic;
