@@ -139,7 +139,8 @@ namespace SFMCSVRead
 				if (machine.Current == State.Error){Console.WriteLine("ERRORE");Console.ReadLine();return;}
 				if (output == null) continue;
 				if (output is string){Console.WriteLine("{" + output + "}");}
-				if (output is string[]){ var campi = (string[])output; Console.WriteLine("{" + string.Join(", ", campi) + "}"); Console.WriteLine();}
+				if (output is string[]){ var campi = (string[])output;
+				Console.WriteLine("{" + string.Join(", ", campi) + "}"); Console.WriteLine();}
 			
 			}
 			Console.WriteLine("Press any key to exit.");
