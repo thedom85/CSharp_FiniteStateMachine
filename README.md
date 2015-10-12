@@ -39,6 +39,20 @@ namespace SFM_Easy
 }
 ```
 
+### Create Enum Command
+```C#
+namespace SFM_Easy.States
+{
+	public enum Command
+	{
+		Start,
+		Pause
+	}
+
+}
+
+```
+
 ### Create State Active
 ```C#
 using System;
@@ -105,19 +119,7 @@ namespace SFM_Easy.States
 ```
 
 
-### Create Enum Command
-```C#
-namespace SFM_Easy.States
-{
-	public enum Command
-	{
-		Start,
-		Pause
-	}
 
-}
-
-```
 
 
 
