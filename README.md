@@ -266,4 +266,175 @@ namespace SFMCSVRead.States
 
 
 
+SFM Flow Control 
+---------------
+
+### Create Main
+```C#
+using System;
+using SFM;
+using SFMMonitorApp.States;
+namespace SFMMonitorApp
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var machine = new Machine(new StateInactive());
+			var output = machine.Command("Input_Begin", Command.Begin);
+			Console.WriteLine(Command.Begin.ToString() + "->  State: " + machine.Current);
+			Console.WriteLine(output);
+
+			output = machine.Command("Input_Pause", Command.Pause);
+			Console.WriteLine(Command.Pause.ToString() + "->  State: " + machine.Current);
+			Console.WriteLine(output);
+
+			output = machine.Command("Input_End", Command.End);
+			Console.WriteLine(Command.End.ToString() + "->  State: " + machine.Current);
+			Console.WriteLine(output);
+
+			output = machine.Command("Input_Exit", Command.Exit);
+			Console.WriteLine(Command.End.ToString() + "->  State: " + machine.Current);
+			Console.WriteLine(output);
+
+			Console.WriteLine("Press any key to exit.");
+			Console.ReadKey();
+		}
+	}
+}
+```
+
+
+### Create Enum Command
+```C#
+namespace SFMMonitorApp.States
+{
+	public enum Command
+	{
+		Begin,
+		End,
+		Pause,
+		Resume,
+		Exit
+	}
+
+}
+```
+
+### Create StateActive
+```C#
+using System;
+using SFM;
+namespace SFMMonitorApp.States
+{
+	public class StateActive : State
+	{
+		public override void Handle(IContext context)
+		{
+			//Gestione parametri
+			var input = (String)context.Input;
+			context.Output = input;
+			//Gestione Navigazione
+			if ((Command)context.Command == Command.Pause) context.Next = new StatePaused();
+			if ((Command)context.Command == Command.End) context.Next = new StateInactive();
+			if ((Command)context.Command == Command.Exit) context.Next = new StateTerminated();
+			if ((Command)context.Command == Command.Begin) context.Next = this;
+		}
+	}
+}
+```
+
+### Create StateInactive
+```C#
+using System;
+using SFM;
+namespace SFMMonitorApp.States
+{
+	public class StateInactive : State
+	{
+
+		public override void Handle(IContext context)
+		{
+			//Gestione Parametri
+			var input = (String)context.Input;
+			context.Output = input;
+			//Gestione Navigazione
+			if ((Command)context.Command == Command.Begin) context.Next = new StateActive();
+			if ((Command)context.Command == Command.Pause) context.Next = new StatePaused();
+			if ((Command)context.Command == Command.End) context.Next = this;
+			if ((Command)context.Command == Command.Exit) context.Next = new StateTerminated();
+
+		}
+	}
+}
+```
+
+### Create StatePaused
+```C#
+using System;
+using SFM;
+
+namespace SFMMonitorApp.States
+{
+public class StatePaused : State
+{
+     public override void Handle(IContext context)
+     {
+		 //Gestione parametri
+		 var input = (String)context.Input;
+		 context.Output = input;
+		 //Gestione Navigazione
+		 if ((Command)context.Command == Command.Begin) context.Next = new	StateActive();
+		 if ((Command)context.Command == Command.End) context.Next = new	StateInactive();
+		 if ((Command)context.Command == Command.Exit) context.Next = new StateTerminated();
+		 if ((Command)context.Command == Command.Pause) context.Next = this;
+     }
+ }
+}
+```
+
+
+### Create StateTerminated
+```C#
+using System;
+using SFM;
+namespace SFMMonitorApp.States
+{
+	public class StateTerminated : State
+	{
+			public override void Handle(IContext context)
+			{
+				//Gestione parametri
+				var input = (String)context.Input;
+				context.Output = input;
+				//Gestione Navigazione
+				context.Next = this;
+			}
+
+	}
+}
+```
+
+### Create ErrorState
+```C#
+using SFM;
+namespace SFMMonitorApp.States
+{
+
+	class ErrorState: State{
+		public override void Handle(IContext context)
+		{
+		//	Console.Write(this.GetType().Name);
+			context.Next = this;
+		}
+		public override int GetHashCode(){  return GetType().GetHashCode();    }
+		public override bool Equals(object obj){ return (obj is ErrorState);   }
+	}
+}
+```
+
+
+```
+
+
 
