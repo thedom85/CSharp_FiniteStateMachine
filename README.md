@@ -24,12 +24,10 @@ namespace SFM_Easy
 			var output = machine.Command("Input_Start", Command.Start);
 			Console.WriteLine(Command.Start.ToString() + "->  State: " + machine.Current);
 			Console.WriteLine(output);
-			Console.WriteLine("-------------------------------------------------");
 
 			output = machine.Command("Input_Pause", Command.Pause);
 			Console.WriteLine(Command.Pause.ToString() + "->  State: " + machine.Current);
 			Console.WriteLine(output);
-			Console.WriteLine("-------------------------------------------------");
 
 			Console.WriteLine("");
 			Console.WriteLine("Press any key to exit.");
