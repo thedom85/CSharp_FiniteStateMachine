@@ -29,7 +29,6 @@ namespace SFM_Easy
 			Console.WriteLine(Command.Pause.ToString() + "->  State: " + machine.Current);
 			Console.WriteLine(output);
 
-			Console.WriteLine("");
 			Console.WriteLine("Press any key to exit.");
 			Console.ReadKey();
 		}
