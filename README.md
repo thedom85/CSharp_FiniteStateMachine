@@ -115,7 +115,153 @@ namespace SFM_Easy.States
 
 ```
 
+CSV Reader
+---------------
 
+### Create Main
+```C#
+using System;
+using SFM;
+using SFMCSVRead.States;
+namespace SFMCSVRead
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var csv = "\"ciao\",\"dvdsovnso\"\r\n";
+			var machine = new Machine(new StateInitial());
+			foreach (var c in csv)
+			{
+				//Console.WriteLine("");
+				//Console.Write(c+" -> ");
+				var output = machine.Process(c);
+				if (machine.Current == State.Error){Console.WriteLine("ERRORE");Console.ReadLine();return;}
+				if (output == null) continue;
+				if (output is string){Console.WriteLine("{" + output + "}");}
+				if (output is string[]){ var campi = (string[])output; Console.WriteLine("{" + string.Join(", ", campi) + "}"); Console.WriteLine();}
+			
+			}
+			Console.WriteLine("Press any key to exit.");
+			Console.ReadKey();
+		}
+	}
+}
+
+```
+
+
+### Create StateInitial
+```C#
+using System.Collections.Generic;
+using System.Text;
+using SFM;
+namespace SFMCSVRead.States
+{
+	public class StateInitial : SFM.State
+	{
+		public override void Handle(IContext context)
+		{
+			//Console.Write(this.GetType().Name);
+			var input = (char)context.Input;
+			if (input == '"')
+			{
+				context.Next = new StateA1();
+				context["actual-field"] = new StringBuilder();
+				if (!context.ContainsKey("actual-line"))
+				context["actual-line"] = new List<string>();
+				context.Next = new StateA1();
+			}
+		}
+	}
+}
+```
+
+
+### Create StateA1
+```C#
+using System.Text;
+using SFM;
+namespace SFMCSVRead.States
+{
+	public class StateA1 : SFM.State
+	{
+		public override void Handle(IContext context)
+		{
+			//Console.Write(this.GetType().Name);
+			var input = (char)context.Input;
+			if (input == '"')
+			{
+				context.Next = new StateA2();
+			}
+			else
+			{
+				var actualField = (StringBuilder)context["actual-field"];
+				actualField.Append(input);
+				context.Next = this;
+			}
+		}
+	}
+}
+```
+
+### Create StateA2
+```C#
+using System.Collections.Generic;
+using System.Text;
+using SFM;
+namespace SFMCSVRead.States
+{
+	public class StateA2 : SFM.State
+	{
+		public override void Handle(IContext context)
+		{
+			//Console.Write(this.GetType().Name);
+			var input = (char)context.Input;
+			var actualField = (StringBuilder)context["actual-field"];
+			var actualLine = (List<string>)context["actual-line"];
+			if (input == ',')
+			{
+				var output = actualField.ToString();
+				actualLine.Add(output);
+				context.Output = output;
+				context.Next = new StateInitial();
+			}
+			else if (input == '\r')
+			{
+				var output = actualField.ToString();
+				actualLine.Add(output);
+				context.Output = output;
+				context.Next = this;
+			}
+			else if (input == '\n')
+			{
+				context["actual-line"] = new List<string>();
+				context.Output = actualLine.ToArray();
+				context.Next = new StateInitial();
+			}
+		}
+	}
+}
+```
+
+
+### Create ErrorState
+```C#
+using SFM;
+namespace SFMCSVRead.States
+{
+	class ErrorState : SFM.State
+	{
+		public override void Handle(IContext context)
+		{
+			context.Next = this;
+		}
+		public override int GetHashCode() { return GetType().GetHashCode(); }
+		public override bool Equals(object obj) { return (obj is ErrorState); }
+	}
+}
+```
 
 
 
