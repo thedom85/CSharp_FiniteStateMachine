@@ -2,6 +2,11 @@
 FiniteStateMachine  is a Simple State Machine, written in C#. 
 It can manage any Stateful object by defining states and transitions between these states.
 
+Finite state machines may sound like a very dry and boring topic but they reveal a lot about the power of different types of computing machine.  Every Turing machine includes a finite state machine so there is a sense in which they come first. They also turn out to be very useful in practice.
+
+The simplest type of computing machine that is worth considering is called a ‘finite state machine’.
+As it happens, the finite state machine is also a useful approach to many problems in software architecture
+
 Getting started
 ---------------
 
