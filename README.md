@@ -10,9 +10,7 @@ As it happens, the finite state machine is also a useful approach to many proble
 Three examples of the use Finite State Machine :
 
 1)Getting started
-
 2)CSV Reader
-
 3)SFM Flow Control 
 
 
