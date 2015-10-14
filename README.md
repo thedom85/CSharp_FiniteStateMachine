@@ -8,9 +8,13 @@ The simplest type of computing machine that is worth considering is called a ‘
 As it happens, the finite state machine is also a useful approach to many problems in software architecture
 
 Three examples of the use Finite State Machine :
+
 1)Getting started
+
 2)CSV Reader
+
 3)SFM Flow Control 
+
 
 Getting started
 ---------------
