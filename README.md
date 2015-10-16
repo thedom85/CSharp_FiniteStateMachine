@@ -11,12 +11,12 @@ Library [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/mast
 
 Advantages tu use my library FiniteStateMachine:
 
-    1. Define a "context" class to present a single interface to the outside world.
-    2. Define a State abstract base class.
-    3. Represent the different "states" of the state machine as derived classes of the State base class.
-    4. Define state-specific behavior in the appropriate State derived classes.
-    5. Maintain a pointer to the current "state" in the "context" class.
-    6. To change the state of the state machine, change the current "state" pointer.
+1. Define a "context" class to present a single interface to the outside world.
+2. Define a State abstract base class.
+3. Represent the different "states" of the state machine as derived classes of the State base class.
+4. Define state-specific behavior in the appropriate State derived classes.
+5. Maintain a pointer to the current "state" in the "context" class.
+6. To change the state of the state machine, change the current "state" pointer.
 
 
 
