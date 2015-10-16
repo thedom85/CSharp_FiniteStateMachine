@@ -7,7 +7,7 @@ Finite state machines may sound like a very dry and boring topic but they reveal
 The simplest type of computing machine that is worth considering is called a ‘finite state machine’.
 As it happens, the finite state machine is also a useful approach to many problems in software architecture
  
-
+Library [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFM "Folder") 
 
 Three examples of the use Finite State Machine :
 
