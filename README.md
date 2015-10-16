@@ -10,7 +10,6 @@ As it happens, the finite state machine is also a useful approach to many proble
 Library [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFM "Folder") 
 
 Advantages tu use my library FiniteStateMachine:
-
     1. Define a "context" class to present a single interface to the outside world.
     2. Define a State abstract base class.
     3. Represent the different "states" of the state machine as derived classes of the State base class.
