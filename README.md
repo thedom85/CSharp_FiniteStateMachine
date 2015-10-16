@@ -29,7 +29,7 @@ Three examples of the use Finite State Machine :
 
 Getting started
 ---------------
-[Schema]: http://i.stack.imgur.com/tLbXm.png "Schema"
+[Id]: http://i.stack.imgur.com/tLbXm.png "Schema"
 ### Create Main
 ```C#
 using System;
