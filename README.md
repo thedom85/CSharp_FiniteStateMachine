@@ -296,6 +296,8 @@ namespace SFMCSVRead.States
 SFM Flow Control 
 ---------------
 
+![Schema image](http://i.stack.imgur.com/IAXY4.gif "Schema")
+
 ### Create Main
 ```C#
 using System;
