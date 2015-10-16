@@ -9,7 +9,7 @@ As it happens, the finite state machine is also a useful approach to many proble
 
 Three examples of the use Finite State Machine :
 
-1. Getting started (Introduction) [an example](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFMCSVRead/SFMCSVRead "Folder") 
+1. Getting started (Introduction) [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFMCSVRead/SFMCSVRead "Folder") 
 2. CSV Reader (Example of reader syntax csv)
 3. SFM Flow Control (Example of monitoring of a flow)
 
