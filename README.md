@@ -6,12 +6,14 @@ Finite state machines may sound like a very dry and boring topic but they reveal
 
 The simplest type of computing machine that is worth considering is called a ‘finite state machine’.
 As it happens, the finite state machine is also a useful approach to many problems in software architecture
+ 
+
 
 Three examples of the use Finite State Machine :
 
-1. Getting started (Introduction) [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFMCSVRead/SFMCSVRead "Folder") 
-2. CSV Reader (Example of reader syntax csv)
-3. SFM Flow Control (Example of monitoring of a flow)
+1. Getting started (Introduction) [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFM_Easy "Folder") 
+2. CSV Reader (Example of reader syntax csv)[Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFMCSVRead/SFMCSVRead "Folder") 
+3. SFM Flow Control (Example of monitoring of a flow) [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFMMonitorApp "Folder") 
 
 
 Getting started
