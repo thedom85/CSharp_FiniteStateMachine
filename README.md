@@ -8,7 +8,7 @@ The simplest type of computing machine that is worth considering is called a ‘
 As it happens, the finite state machine is also a useful approach to many problems in software architecture
  
 Library [Folder](https://github.com/thedom85/CSharp_FiniteStateMachine/tree/master/SFM/SFM "Folder") 
-(Download DLL   -->  [Download](https://github.com/thedom85/CSharp_FiniteStateMachine/blob/master/SFM/SFM/bin/Debug/SFM.dll "Download") )
+(Download DLL   --->  [Download](https://github.com/thedom85/CSharp_FiniteStateMachine/blob/master/SFM/SFM/bin/Debug/SFM.dll "Download") )
 
 
 Advantages tu use my library FiniteStateMachine:
